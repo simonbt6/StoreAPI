@@ -14,7 +14,7 @@ namespace AdminPanel.Data.Database
         public string Server = "149.28.37.80";
         public string DatabaseName = "StoreAPI";
         private string Username = "root";
-        private string Password = "Classe601!";
+        private string Password = "_f3J)QqZ)MXp7~6";
 
         public MySqlConnection Connection { get; set; }
 
