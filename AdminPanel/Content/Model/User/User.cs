@@ -8,26 +8,26 @@ namespace AdminPanel.Content.Model.User
 {
     public class User
     {
-        private int ID;
+        private string UUID;
         private string Firstname;
         private string Lastname;
         private string Email;
 
-        public User(int ID)
+        public User(string UUID)
         {
-            this.ID = ID;
+            this.UUID = UUID;
         }
         
-        public User(int ID, string Firstname, string Lastname, string Email):this(ID)
+        public User(string UUID, string Firstname, string Lastname, string Email):this(UUID)
         {
             this.Firstname = Firstname;
             this.Lastname = Lastname;
             this.Email = Email;
         }
 
-        public int getID()
+        public string getID()
         {
-            return ID;
+            return UUID;
         }
 
         public string getFirstname()

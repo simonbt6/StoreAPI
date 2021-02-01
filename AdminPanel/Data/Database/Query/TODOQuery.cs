@@ -35,7 +35,7 @@ namespace AdminPanel.Data.Database.Query
                         TODO todo = new TODO(
                             reader.GetString("title"),
                             reader.GetString("description"),
-                            reader.GetInt32("user_id"),
+                            reader.GetString("user_id"),
                             reader.GetInt16("priority"),
                             reader.GetDateTime("created_at"),
                             reader.GetDateTime("updated_at"),

@@ -9,9 +9,9 @@ namespace AdminPanel.Content.Model.User
     public class AdminUser: User
     {
         private int AuthLevel;
-        private int ID;
+        private string UUID;
 
-        public AdminUser(int ID, string Firstname, string Lastname, string Email, int AuthLevel): base(ID, Firstname, Lastname, Email)
+        public AdminUser(string UUID, string Firstname, string Lastname, string Email, int AuthLevel): base(UUID, Firstname, Lastname, Email)
         {
             this.AuthLevel = AuthLevel;
         }

@@ -32,7 +32,7 @@ namespace AdminPanel.Data.Database.Query
                 if (reader.Read())
                 {
                     AdminUser user = new AdminUser(
-                            reader.GetInt16("id"),
+                            reader.GetInt16("id")+"",
                             reader.GetString("firstname"),
                             reader.GetString("lastname"),
                             reader.GetString("email"),
@@ -59,6 +59,52 @@ namespace AdminPanel.Data.Database.Query
                 }
                 return builder.ToString();
             }
+        }
+        
+        public static List<User> getUsers()
+        {
+            List<User> users = new List<User>();
+
+            if (database.isConnected())
+            {
+                string queryString = "SELECT * FROM user";
+                MySqlDataReader reader = null;
+                try
+                {
+                    MySqlCommand cmd = new MySqlCommand(queryString, database.Connection);
+                    reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        User user = new User(
+                            reader.GetString("uuid"),
+                            reader.GetString("firstname"),
+                            reader.GetString("lastname"),
+                            reader.GetString("email")
+                        );
+                        users.Add(user);
+                    }
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+                finally
+                {
+                    try
+                    {
+                        reader.Close();
+                    }
+                    catch(Exception e)
+                    {
+                        Console.WriteLine(e);
+                    }
+                }
+                
+            }
+
+
+            return users;
         }
     }
 }

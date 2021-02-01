@@ -52,5 +52,9 @@ namespace AdminPanel.Content.Views.Frames
         {
             NavigationService.Navigate(new ManagementTools.TODO.TodoPage(user));
         }
+        private void navigateMailing(object sender, RoutedEventArgs args)
+        {
+            NavigationService.Navigate(new ManagementTools.Mailing.MainMailling());
+        }
     }
 }

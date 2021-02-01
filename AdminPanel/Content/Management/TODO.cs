@@ -16,13 +16,13 @@ namespace AdminPanel.Content.Management
          * 2 - Urgent
          **/
         private readonly int Priority;
-        private readonly int UserId;
+        private readonly string UserId;
         public DateTime CreatedAt { get; }
         public DateTime UpdatedAt { get; }
         public DateTime StartingAt { get; }
         public DateTime EndingAt { get; }
 
-        public TODO(string Title, string Description, int UserId, int Priority, DateTime CreatedAt, DateTime UpdatedAt, DateTime StartingAt, DateTime EndingAt)
+        public TODO(string Title, string Description, string UserId, int Priority, DateTime CreatedAt, DateTime UpdatedAt, DateTime StartingAt, DateTime EndingAt)
         {
             this.Title = Title;
             this.Description = Description;
@@ -54,7 +54,7 @@ namespace AdminPanel.Content.Management
             return Priority;
         }
 
-        public int GetUserId()
+        public string GetUserId()
         {
             return UserId;
         }

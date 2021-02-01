@@ -121,6 +121,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Content\Views\Frames\ManagementTools\Mailing\MainMailling.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Content\Views\Frames\ManagementTools\TODO\TodoPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -156,6 +160,11 @@
     <Compile Include="Content\Views\Frames\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Content\Views\Frames\ManagementTools\Mailing\Component\SelectedUserListItem.cs" />
+    <Compile Include="Content\Views\Frames\ManagementTools\Mailing\Component\UserListItem.cs" />
+    <Compile Include="Content\Views\Frames\ManagementTools\Mailing\MainMailling.xaml.cs">
+      <DependentUpon>MainMailling.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Content\Views\Frames\ManagementTools\TODO\Component\TodoListItem.cs" />
     <Compile Include="Content\Views\Frames\ManagementTools\TODO\TodoPage.xaml.cs">
       <DependentUpon>TodoPage.xaml</DependentUpon>
@@ -190,6 +199,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Server\Status\HTTP\ProductHTTP.cs" />
+    <Compile Include="Data\SMTP\SMTPConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

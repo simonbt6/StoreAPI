@@ -6,6 +6,7 @@ using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using AdminPanel.Data.Database.Query;
 using AdminPanel.Content.Model.User;
+using AdminPanel.Data.SMTP;
 
 namespace AdminPanel.Content.Views.Frames.ManagementTools.TODO
 {
@@ -19,6 +20,9 @@ namespace AdminPanel.Content.Views.Frames.ManagementTools.TODO
 
         public TodoPage(AdminUser user)
         {
+            SMTPConnection con = new SMTPConnection();
+            con.sendMail("Welcome to Boreal Store!", "Here is this week's best products!", new List<string>(new string[] { user.getEmail(), "simonbt8@gmail.com" }));
+
             this.user = user;
             InitializeComponent();
             todos = TODOQuery.getAll();
@@ -116,7 +120,7 @@ namespace AdminPanel.Content.Views.Frames.ManagementTools.TODO
             
         }
 
-        private void makeVisibleAddTODO(object sender, RoutedEventArgs e)
+        private void makeVisibleAddTODO(object sender, RoutedEventArgs args)
         {
             addNewTODOGrid.Visibility = Visibility.Visible;
         }

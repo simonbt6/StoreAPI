@@ -63,10 +63,10 @@
                             </Button>
                             <ListBox Background="Gray">
                                 <ListBoxItem Padding="0" HorizontalContentAlignment="Stretch" Background="Gray">
-                                    <Button Background="Gray" BorderBrush="Gray" FontSize="10" HorizontalContentAlignment="Left" Click="navigateTODO">TODO List</Button>
+                                    <Button Background="Gray" BorderBrush="Gray" FontSize="10" HorizontalContentAlignment="Left" Click="navigateTODO">TODO</Button>
                                 </ListBoxItem>
                                 <ListBoxItem Padding="0" HorizontalContentAlignment="Stretch" Background="Gray">
-                                    <Button Background="Gray" BorderBrush="Gray" FontSize="10" HorizontalContentAlignment="Left">Content</Button>
+                                    <Button Background="Gray" BorderBrush="Gray" FontSize="10" HorizontalContentAlignment="Left" Click="navigateMailing">Mailing</Button>
                                 </ListBoxItem>
                                 <ListBoxItem Padding="0" HorizontalContentAlignment="Stretch" Background="Gray">
                                     <Button Background="Gray" BorderBrush="Gray" FontSize="10" HorizontalContentAlignment="Left">View settings</Button>

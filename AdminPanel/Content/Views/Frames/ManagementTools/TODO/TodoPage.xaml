@@ -38,7 +38,7 @@
                                 <materialDesign:PackIcon Kind="Check"/>
                             </Button>
                             <TextBlock VerticalAlignment="Center" Grid.Column="1" Margin="30 0 0 0">
-                                TODO number 1
+                                TODO number 3
                             </TextBlock>
                         </Grid>
                     </ListViewItem>
@@ -58,7 +58,7 @@
                                 TODO number 2
                             </TextBlock>
                         </Grid>
-                        
+
                     </ListViewItem>
 
 
@@ -149,6 +149,6 @@
                 </Grid>
             </Grid>
         </Grid>
-        
+
     </Grid>
 </Page>

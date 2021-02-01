@@ -1,0 +1,45 @@
+﻿<Page x:Class="AdminPanel.Content.Views.Frames.ManagementTools.Mailing.MainMailling"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AdminPanel.Content.Views.Frames.ManagementTools.Mailing"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainMailling">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <ListView x:Name="userList">
+            
+        </ListView>
+        <Grid Grid.Column="1" Background="LightBlue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="20">Selected users:</TextBlock>
+            <Border Grid.Row="1" Grid.Column="1" BorderBrush="Black" Background="White" BorderThickness="1">
+                <ListView Background="White" VerticalAlignment="Stretch" x:Name="selectedUsersList">
+                    
+                </ListView>
+            </Border>
+            
+            <StackPanel Grid.Row="2" Grid.Column="1">
+                <Button x:Name="sendMailButton">
+                    Send email
+                </Button>
+            </StackPanel>
+        </Grid>
+        
+    </Grid>
+</Page>
